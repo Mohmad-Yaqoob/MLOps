@@ -71,4 +71,4 @@ class chatting:
         self.menu()
         
         
-obj = chatting()
+# obj = chatting()

@@ -1,11 +1,31 @@
 class chatting:
+    __user_id = 1
     def __init__(self):
+        self.id = chatting.__user_id
+        chatting.__user_id += 1
+        self.__name = "Default User"
         self.username = ''
         self.password = ''
         self.loggedin = False
-        self.menu()
-        self.users = []
+        # self.menu()
+        # self.users = []
+    
+    @staticmethod
+    def get_id():
+        return chatting.__user_id
+    
+    @staticmethod
+    def set_id(val):
+        chatting.__user_id = val
         
+        
+    def get_name(self):
+        return self.__name
+    @staticmethod
+    def set_name(self, val):
+        self.__name = val
+
+    
         
     def menu(self):
         user_input = input("""Welcome to Chatting woooo

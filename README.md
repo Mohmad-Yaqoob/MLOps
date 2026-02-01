@@ -1,1 +1,1 @@
-Firts MLOps project
+MLOps project

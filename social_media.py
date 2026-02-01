@@ -11,7 +11,7 @@ class chatting:
         user_input = input("""Welcome to Chatting woooo
                            1. Press 1 to signin
                            2. Press 2 to signin
-                           3. Press 3 to write a pow
+                           3. Press 3 to write a post
                            4. Press 4 to message a friend
                            5. Press any other key to exit 
                             """)
@@ -21,9 +21,9 @@ class chatting:
         elif user_input == "2":
             self.signin()
         elif user_input == "3":
-            pass
+            self.my_post()
         elif user_input == "4":
-            pass
+            self.sending()
         else:
             exit()
     
@@ -46,6 +46,29 @@ class chatting:
                 self.loggedin = True
             else:
                 print("Please input correct credentials")
+        print("\n")
+        self.menu()
+    
+    
+    def my_post(self):
+        if self.loggedin == True:
+            txt = input("Enter content-> ")
+            print(f"Following content has been posted -> {txt}")
+            
+        else:
+            print("First SignIn")
+        print("\n")
+        self.menu()
+        
+    def sending(self):
+        if self.loggedin==True:
+            txt = input("Enter your message-> ")
+            frnd = input("Whome message to send")
+            print(f"message {txt} sended to {frnd}")
+        else:
+            print("SignIn first! ")
+        print("\n")
+        self.menu()
         
         
 obj = chatting()
